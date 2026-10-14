@@ -53,3 +53,30 @@ function changeLanguage(langCode) {
         el.textContent = el.getAttribute(`data-${currentLang}`);
     });
 }
+
+// --- Dark Mode / Light Mode Toggle ---
+function toggleTheme() {
+    const body = document.body;
+    const themeBtn = document.getElementById('themeToggleBtn');
+
+    body.classList.toggle('dark-mode');
+
+    if (body.classList.contains('dark-mode')) {
+        themeBtn.textContent = '☀️ Light Mode';
+        localStorage.setItem('theme', 'dark');
+    } else {
+        themeBtn.textContent = '🌙 Dark Mode';
+        localStorage.setItem('theme', 'light');
+    }
+}
+
+// --- Restore Saved Theme on Page Load ---
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme');
+    const themeBtn = document.getElementById('themeToggleBtn');
+
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+        if (themeBtn) themeBtn.textContent = '☀️ Light Mode';
+    }
+});
