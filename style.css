@@ -49,19 +49,19 @@ header {
 }
 
 .lang-switch-btn {
-    background: var(--bg-color);
-    border: 1px solid var(--border-color);
-    color: var(--accent-color);
-    padding: 8px 14px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 0.85rem;
-    transition: background 0.2s;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease-in-out;
 }
 
 .lang-switch-btn:hover {
-    background: var(--border-color);
+  border-color: #888;
 }
 
 .announcement-banner {
