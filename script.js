@@ -1,24 +1,55 @@
-<script type="text/javascript">
-  // Initialize Google Translate
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'en', // Change to your site's main default language (e.g., 'km' if default is Khmer)
-      includedLanguages: 'km,en,vi,ja,ko,th', // Restrict to these 6 languages
-      autoDisplay: false
-    }, 'google_translate_element');
-  }
+let currentLang = 'en';
 
-  // Function called when dropdown option is selected
-  function changeLanguage(langCode) {
-    if (!langCode) return;
-
-    var translateCombo = document.querySelector('.goog-te-combo');
-    if (translateCombo) {
-      translateCombo.value = langCode;
-      translateCombo.dispatchEvent(new Event('change'));
+const translations = {
+    en: {
+        headerTitle: "Huokaing Thara Banking Portal",
+        headerSubtitle: "Post-Penetration Testing Verified Release",
+        announcementText: "🔒 System Security Verified: Penetration testing passed successfully. New customer utilities added below!"
+    },
+    km: {
+        headerTitle: "ផតថលធនាគារ ហួកាំង តារា",
+        headerSubtitle: "ការដាក់ឱ្យដំណើរការផ្ទៀងផ្ទាត់សុវត្ថិភាពក្រោយពេលសាកល្បងជ្រៀតចូល",
+        announcementText: "🔒 បញ្ជាក់សុវត្ថិភាពប្រព័ន្ធ៖ ការធ្វើតេស្តជ្រៀតចូលបានជោគជ័យ។ បានបន្ថែមមុខងារថ្មីៗសម្រាប់អតិថិជនខាងក្រោម!"
+    },
+    vi: {
+        headerTitle: "Cổng Ngân hàng Huokaing Thara",
+        headerSubtitle: "Bản phát hành đã xác thực sau kiểm tra xâm nhập",
+        announcementText: "🔒 Đã xác thực bảo mật hệ thống: Kiểm thử xâm nhập thành công. Các tiện ích khách hàng mới được thêm bên dưới!"
+    },
+    ja: {
+        headerTitle: "ホウカイン・タラ バンキングポータル",
+        headerSubtitle: "ペネトレーションテスト検証済みリリース",
+        announcementText: "🔒 システムセキュリティ検証済：ペネトレーションテストが正常に完了しました。新しい顧客向け機能が追加されました！"
+    },
+    ko: {
+        headerTitle: "후오카인 타라 뱅킹 포털",
+        headerSubtitle: "모의 해킹 검증 완료 배포",
+        announcementText: "🔒 시스템 보안 검증됨: 모의 해킹이 성공적으로 완료되었습니다. 새로운 고객 편의 기능이 아래에 추가되었습니다!"
+    },
+    th: {
+        headerTitle: "พอร์ทัลธนาคาร ฮัวไคก์ ธารา",
+        headerSubtitle: "รุ่นที่ได้รับการตรวจสอบความปลอดภัยหลังการทดสอบการเจาะระบบ",
+        announcementText: "🔒 ยืนยันความปลอดภัยของระบบ: การทดสอบการเจาะระบบสำเร็จเรียบร้อยแล้ว เพิ่มยูทิลิตี้ลูกค้าใหม่ด้านล่าง!"
     }
-  }
-</script>
+};
 
-<!-- Load Google Translate API Script -->
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+function changeLanguage(langCode) {
+    if (!langCode) return;
+    currentLang = langCode;
+
+    // Update main text elements from dictionary
+    const headerTitle = document.getElementById('headerTitle');
+    const headerSubtitle = document.getElementById('headerSubtitle');
+    const announcementText = document.getElementById('announcementText');
+
+    if (translations[currentLang]) {
+        if (headerTitle) headerTitle.textContent = translations[currentLang].headerTitle;
+        if (headerSubtitle) headerSubtitle.textContent = translations[currentLang].headerSubtitle;
+        if (announcementText) announcementText.textContent = translations[currentLang].announcementText;
+    }
+
+    // Update all elements with data attributes matching current language
+    document.querySelectorAll(`[data-${currentLang}]`).forEach(el => {
+        el.textContent = el.getAttribute(`data-${currentLang}`);
+    });
+}
