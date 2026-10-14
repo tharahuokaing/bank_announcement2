@@ -1,26 +1,24 @@
-let currentLang = 'en';
+<script type="text/javascript">
+  // Initialize Google Translate
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en', // Change to your site's main default language (e.g., 'km' if default is Khmer)
+      includedLanguages: 'km,en,vi,ja,ko,th', // Restrict to these 6 languages
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
 
-function toggleLanguage() {
-    currentLang = currentLang === 'en' ? 'kh' : 'en';
-    const btn = document.getElementById('langToggleBtn');
-    const headerTitle = document.getElementById('headerTitle');
-    const headerSubtitle = document.getElementById('headerSubtitle');
-    const announcementText = document.getElementById('announcementText');
+  // Function called when dropdown option is selected
+  function changeLanguage(langCode) {
+    if (!langCode) return;
 
-    if (currentLang === 'kh') {
-        btn.textContent = 'English / EN';
-        headerTitle.textContent = 'ផតថលធនាគារ ហួតកៃ តារា';
-        headerSubtitle.textContent = 'ការដាក់ឱ្យដំណើរការផ្ទៀងផ្ទាត់សុវត្ថិភាពក្រោយពេលសាកល្បងជ្រៀតចូល';
-        announcementText.textContent = '🔒 បញ្ជាក់សុវត្ថិភាពប្រព័ន្ធ៖ ការធ្វើតេស្តជ្រៀតចូលបានជោគជ័យ។ បានបន្ថែមមុខងារថ្មីៗសម្រាប់អតិថិជនខាងក្រោម!';
-    } else {
-        btn.textContent = 'ភាសាខ្មែរ / KH';
-        headerTitle.textContent = 'Huokaing Thara Banking Portal';
-        headerSubtitle.textContent = 'Post-Penetration Testing Verified Release';
-        announcementText.textContent = '🔒 System Security Verified: Penetration testing passed successfully. New customer utilities added below!';
+    var translateCombo = document.querySelector('.goog-te-combo');
+    if (translateCombo) {
+      translateCombo.value = langCode;
+      translateCombo.dispatchEvent(new Event('change'));
     }
+  }
+</script>
 
-    // Translate dynamic elements using data attributes
-    document.querySelectorAll('[data-en]').forEach(el => {
-        el.textContent = el.getAttribute(`data-${currentLang}`);
-    });
-}
+<!-- Load Google Translate API Script -->
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
