@@ -25,7 +25,21 @@
                 <p id="headerSubtitle">Post-Penetration Testing Verified Release</p>
             </div>
         </div>
-        <button id="langToggleBtn" class="lang-switch-btn" onclick="toggleLanguage()">ភាសាខ្មែរ / KH</button>
+        <!-- Google Translate Container (Hidden, handled via custom selector) -->
+        <div id="google_translate_element" style="display: none;"></div>
+
+        <!-- Language Selector Dropdown -->
+        <div class="lang-dropdown">
+          <select id="langSelect" class="lang-switch-btn" onchange="changeLanguage(this.value)">
+            <option value="">Select Language / ជ្រើសរើសភាសា</option>
+            <option value="km">ភាសាខ្មែរ (Khmer)</option>
+            <option value="en">English</option>
+            <option value="vi">Tiếng Việt (Vietnamese)</option>
+            <option value="ja">日本語 (Japanese)</option>
+            <option value="ko">한국어 (Korean)</option>
+            <option value="th">ไทย (Thai)</option>
+          </select>
+        </div>
     </header>
 
     <!-- Announcement Banner -->
