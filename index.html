@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secure Banking & Utility Dashboard | Huokaing Thara</title>
+    <title data-en="Secure Banking & Utility Dashboard | Huokaing Thara" 
+           data-km="ផ្ទាំងគ្រប់គ្រងសុវត្ថិភាពធនាគារ និងឧបករណ៍ប្រើប្រាស់ | ហួកាំង ថារ៉ា"
+           data-vi="Bảng điều khiển Ngân hàng & Tiện ích Bảo mật | Huokaing Thara"
+           data-ja="セキュアバンキング＆ユーティリティダッシュボード | ホウカイン・タラ"
+           data-ko="보안 뱅킹 및 유틸리티 대시보드 | 후오카인 타라"
+           data-th="แดชบอร์ดธนาคารและความปลอดภัย | ฮัวไคก์ ธารา">
+        Secure Banking & Utility Dashboard | Huokaing Thara
+    </title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="bank.jpg">
 </head>
@@ -21,29 +28,51 @@
                 <img src="bank.jpg" alt="Logo" style="width: 24px; height: 24px; object-fit: contain;">
             </div>
             <div class="logo-text">
-                <h1 data-km="ការសាកល្បងធ្វើតេស្តប្រព័ន្ធធនាគារ ហួកាំងថារ៉ា ១ & ២" data-en="Penetration Testing Announcement Logo">ការសាកល្បងធ្វើតេស្តប្រព័ន្ធធនាគារ ហួកាំងថារ៉ា ១ & ២</h1>
-                <p id="headerSubtitle">Post-Penetration Testing Verified Release</p>
+                <h1 id="headerTitle" 
+                    data-en="Huokaing Thara Banking Portal" 
+                    data-km="ផតថលធនាគារ ហួកាំង តារា"
+                    data-vi="Cổng Ngân hàng Huokaing Thara"
+                    data-ja="ホウカイン・タラ バンキングポータル"
+                    data-ko="후오카인 타라 뱅킹 포털"
+                    data-th="พอร์ทัลธนาคาร ฮัวไคก์ ธารา">
+                    Huokaing Thara Banking Portal
+                </h1>
+                <p id="headerSubtitle" 
+                   data-en="Post-Penetration Testing Verified Release" 
+                   data-km="ការដាក់ឱ្យដំណើរការផ្ទៀងផ្ទាត់សុវត្ថិភាពក្រោយពេលសាកល្បងជ្រៀតចូល"
+                   data-vi="Bản phát hành đã xác thực sau kiểm tra xâm nhập"
+                   data-ja="ペネトレーションテスト検証済みリリース"
+                   data-ko="모의 해킹 검증 완료 배포"
+                   data-th="รุ่นที่ได้รับการตรวจสอบความปลอดภัยหลังการทดสอบการเจาะระบบ">
+                    Post-Penetration Testing Verified Release
+                </p>
             </div>
         </div>
+
         <!-- Google Translate Container (Hidden, handled via custom selector) -->
         <div id="google_translate_element" style="display: none;"></div>
 
         <!-- Language Selector Dropdown -->
         <div class="lang-dropdown">
           <select id="langSelect" class="lang-switch-btn" onchange="changeLanguage(this.value)">
-            <option value="">Select Language / ជ្រើសរើសភាសា</option>
-            <option value="km">ភាសាខ្មែរ (Khmer)</option>
-            <option value="en">English</option>
-            <option value="vi">Tiếng Việt (Vietnamese)</option>
-            <option value="ja">日本語 (Japanese)</option>
-            <option value="ko">한국어 (Korean)</option>
-            <option value="th">ไทย (Thai)</option>
+            <option value="en">English / EN</option>
+            <option value="km">ភាសាខ្មែរ / KH</option>
+            <option value="vi">Tiếng Việt / VI</option>
+            <option value="ja">日本語 / JA</option>
+            <option value="ko">한국어 / KO</option>
+            <option value="th">ไทย / TH</option>
           </select>
         </div>
     </header>
 
     <!-- Announcement Banner -->
-    <div class="announcement-banner" id="announcementText">
+    <div class="announcement-banner" id="announcementText" 
+         data-en="🔒 System Security Verified: Penetration testing passed successfully. New customer utilities added below!"
+         data-km="🔒 បញ្ជាក់សុវត្ថិភាពប្រព័ន្ធ៖ ការធ្វើតេស្តជ្រៀតចូលបានជោគជ័យ។ បានបន្ថែមមុខងារថ្មីៗសម្រាប់អតិថិជនខាងក្រោម!"
+         data-vi="🔒 Đã xác thực bảo mật hệ thống: Kiểm thử xâm nhập thành công. Các tiện ích khách hàng mới được thêm bên dưới!"
+         data-ja="🔒 システムセキュリティ検証済：ペネトレーションテストが正常に完了しました。新しい顧客向け機能が追加されました！"
+         data-ko="🔒 시스템 보안 검증됨: 모의 해킹이 성공적으로 완료되었습니다. 새로운 고객 편의 기능이 아래에 추가되었습니다!"
+         data-th="🔒 ยืนยันความปลอดภัยของระบบ: การทดสอบการเจาะระบบสำเร็จเรียบร้อยแล้ว เพิ่มยูทิลิตี้ลูกค้าใหม่ด้านล่าง!">
         🔒 System Security Verified: Penetration testing passed successfully. New customer utilities added below!
     </div>
 
@@ -54,9 +83,31 @@
         <div class="dashboard-card">
             <a href="https://tharahuokaing.github.io/bank_scan_upload_qr1/">
                 <img src="qr.jpg" alt="QR Scanner Icon" class="card-icon">
-                <h3 data-en="QR Code" data-kh="កូដ QR">QR Code</h3>
-                <p data-en="QR Scanner & Fast Payment Upload" data-kh="ម៉ាស៊ីនស្កេន និងទូទាត់រហ័ស">QR Scanner & Fast Payment Upload</p>
-                <span class="card-link" data-en="Open Module" data-kh="បើកកម្មវិធី">Open Module</span>
+                <h3 data-en="QR Code" 
+                    data-km="កូដ QR"
+                    data-vi="Mã QR"
+                    data-ja="QRコード"
+                    data-ko="QR 코드"
+                    data-th="คิวอาร์โค้ด">
+                    QR Code
+                </h3>
+                <p data-en="QR Scanner & Fast Payment Upload" 
+                   data-km="ម៉ាស៊ីនស្កេន និងទូទាត់រហ័ស"
+                   data-vi="Máy quét QR & Tải lên Thanh toán Nhanh"
+                   data-ja="QRスキャナー＆クイック決済アップロード"
+                   data-ko="QR 스캐너 및 빠른 결제 업로드"
+                   data-th="เครื่องสแกน QR และอัปโหลดชำระเงินด่วน">
+                    QR Scanner & Fast Payment Upload
+                </p>
+                <span class="card-link" 
+                      data-en="Open Module" 
+                      data-km="បើកកម្មវិធី"
+                      data-vi="Mở Mô-đun"
+                      data-ja="モジュールを開く"
+                      data-ko="모듈 열기"
+                      data-th="เปิดโมดูล">
+                    Open Module
+                </span>
             </a>
         </div>
 
@@ -64,9 +115,31 @@
         <div class="dashboard-card">
             <a href="https://tharahuokaing.github.io/cinema/">
                 <img src="cinema.jpg" alt="Cinema Icon" class="card-icon">
-                <h3 data-en="Cinema Booking" data-kh="កក់សំបុត្រកុន">Cinema Booking</h3>
-                <p data-en="Legend Cinema Ticketing & Trailers" data-kh="កក់សំបុត្រ និងទស្សនាវីដេអូ">Legend Cinema Ticketing & Trailers</p>
-                <span class="card-link" data-en="Open Module" data-kh="បើកកម្មវិធី">Open Module</span>
+                <h3 data-en="Cinema Booking" 
+                    data-km="កក់សំបុត្រកុន"
+                    data-vi="Đặt vé Xem phim"
+                    data-ja="シネマ予約"
+                    data-ko="영화 예매"
+                    data-th="จองตั๋วภาพยนตร์">
+                    Cinema Booking
+                </h3>
+                <p data-en="Legend Cinema Ticketing & Trailers" 
+                   data-km="កក់សំបុត្រ និងទស្សនាវីដេអូ"
+                   data-vi="Đặt vé & Trailer Phim Legend"
+                   data-ja="レジェンドシネマ発券＆予告編"
+                   data-ko="레전드 시네마 예매 및 예고편"
+                   data-th="จองตั๋วและตัวอย่างภาพยนตร์ Legend Cinema">
+                    Legend Cinema Ticketing & Trailers
+                </p>
+                <span class="card-link" 
+                      data-en="Open Module" 
+                      data-km="បើកកម្មវិធី"
+                      data-vi="Mở Mô-đun"
+                      data-ja="モジュールを開く"
+                      data-ko="모듈 열기"
+                      data-th="เปิดโมดูล">
+                    Open Module
+                </span>
             </a>
         </div>
 
@@ -74,9 +147,31 @@
         <div class="dashboard-card">
             <a href="https://tharahuokaing.github.io/calculator/">
                 <img src="calculator.jpg" alt="Calculator Icon" class="card-icon">
-                <h3 data-en="Currency Calculator" data-kh="ម៉ាស៊ីនគណនាប្រាក់">Currency Calculator</h3>
-                <p data-en="Global Exchange Rates & Daily Sync" data-kh="អត្រាប្តូរប្រាក់អន្តរជាតិប្រចាំថ្ងៃ">Global Exchange Rates & Daily Sync</p>
-                <span class="card-link" data-en="Open Module" data-kh="បើកកម្មវិធី">Open Module</span>
+                <h3 data-en="Currency Calculator" 
+                    data-km="ម៉ាស៊ីនគណនាប្រាក់"
+                    data-vi="Máy tính Tiền tệ"
+                    data-ja="通貨計算機"
+                    data-ko="통화 계산기"
+                    data-th="เครื่องคำนวณสกุลเงิน">
+                    Currency Calculator
+                </h3>
+                <p data-en="Global Exchange Rates & Daily Sync" 
+                   data-km="អត្រាប្តូរប្រាក់អន្តរជាតិប្រចាំថ្ងៃ"
+                   data-vi="Tỷ giá Toàn cầu & Đồng bộ Hàng ngày"
+                   data-ja="グローバル為替レート＆毎日の同期"
+                   data-ko="글로벌 환율 및 일일 동기화"
+                   data-th="อัตราแลกเปลี่ยนทั่วโลกและการซิงค์รายวัน">
+                    Global Exchange Rates & Daily Sync
+                </p>
+                <span class="card-link" 
+                      data-en="Open Module" 
+                      data-km="បើកកម្មវិធី"
+                      data-vi="Mở Mô-đun"
+                      data-ja="モジュールを開く"
+                      data-ko="모듈 열기"
+                      data-th="เปิดโมດูล">
+                    Open Module
+                </span>
             </a>
         </div>
 
@@ -84,7 +179,14 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Huokaing Thara Cybersecurity & Development. All rights reserved.</p>
+        <p data-en="&copy; 2026 Huokaing Thara Cybersecurity & Development. All rights reserved."
+           data-km="&copy; ២០២៦ ហួកាំង ថារ៉ា សន្តិសុខអ៊ីនធឺណិត និងអភិវឌ្ឍន៍។ រក្សាសិទ្ធិគ្រប់យ៉ាង។"
+           data-vi="&copy; 2026 Bảo mật & Phát triển Huokaing Thara. Mọi quyền được bảo lưu."
+           data-ja="&copy; 2026 ホウカイン・タラ サイバーセキュリティ＆開発. 全著作権所有."
+           data-ko="&copy; 2026 후오카인 타라 사이버 보안 및 개발. 모든 권리 보유."
+           data-th="&copy; 2026 ความปลอดภัยทางไซเบอร์และการพัฒนา Huokaing Thara สงวนลิขสิทธิ์ทั้งหมด">
+           &copy; 2026 Huokaing Thara Cybersecurity & Development. All rights reserved.
+        </p>
     </footer>
 
     <!-- External JavaScript Link -->
